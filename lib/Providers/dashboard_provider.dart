@@ -9,14 +9,14 @@ class DashboardProvider extends ChangeNotifier {
   DashboardModel? _dashboardModel;
   DashboardModel? get dashboardData => _dashboardModel;
 
-  Future<void> getDashboardDetails() async {
-    isLoading = true;
-    notifyListeners();
+  Future<DashboardModel> getDashboardDetails() async {
+    // isLoading = true;
+    // notifyListeners();
 
-    final response = await _service.getChapter();
-
-    _dashboardModel = response;
-    isLoading = false;
-    notifyListeners();
+    final response = await _service.getDashboard();
+return response;
+    // _dashboardModel = response;
+    // isLoading = false;
+    // notifyListeners();
   }
 }

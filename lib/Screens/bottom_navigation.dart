@@ -9,6 +9,7 @@ class BotttomNAvigation extends StatefulWidget {
 }
 
 class _BotttomNAvigationState extends State<BotttomNAvigation> {
+  
   int _selectedIndex = 0;
   static const List<Widget> _widgetOptions = <Widget>[
     Dashboard(),
@@ -39,7 +40,7 @@ class _BotttomNAvigationState extends State<BotttomNAvigation> {
             },
             child: Icon(
               Icons.view_list_sharp,
-              color: Theme.of(context).primaryColor,
+              color: Colors.black,
             )),
         title: Image.asset(
           'assets/logo.jpg',

@@ -4,7 +4,7 @@ import 'package:aks_dashboard/Services/api_collection.dart';
 import 'package:http/http.dart' as http;
 
 class DashboardService {
-  Future<DashboardModel> getChapter() async {
+  Future<DashboardModel> getDashboard() async {
     final header = {
       'auth_key': 'AKSHAYAKALPA_APP_KEY',
     };
@@ -20,7 +20,6 @@ class DashboardService {
         body: body);
     if (response.statusCode == 200) {
       String data = response.body;
-      print(data);
       return DashboardModel.fromJson(json.decode(data));
     } else {
       throw Exception('Failed to get dashboard data');
